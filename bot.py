@@ -18,7 +18,18 @@ client = Groq(api_key=api_key)
 
 # Streamlit UI Title
 st.title("💬 Chat with AI")
-st.caption("Powered by Groq - DeepSeek-R1-Distill-LLama-70B")
+st.caption("Powered by Groq API")
+
+# Model selection dropdown
+model_options = {
+    "DeepSeek-R1-Distill-LLama-70B": "deepseek-r1-distill-llama-70b",
+    "Llama 3.2 70B (8192)": "llama3-70b-8192",
+}
+
+selected_model = st.selectbox("🧠 Select Model:", list(model_options.keys()))
+
+# Store selected model in session state
+st.session_state.selected_model = model_options[selected_model]
 
 # Initialize session state for chat history
 if "messages" not in st.session_state:
@@ -49,7 +60,7 @@ if user_input:
         with st.spinner("Thinking..."):
             try:
                 response = client.chat.completions.create(
-                    model="deepseek-r1-distill-llama-70b",
+                    model=st.session_state.selected_model,  # Dynamic model selection
                     messages=st.session_state.messages,
                     max_tokens=500,
                 )
