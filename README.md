@@ -10,8 +10,8 @@ This project is a ChatGPT-style UI that processes both text and images using **L
 ## 📦 Installation  
 
 ```bash
-git clone https://github.com/your-repo/image-chatbot.git
-cd image-chatbot
+git clone https://github.com/RahulPatnaik/AI-Chatbot-event
+cd AI-Chatbot-event
 pip install -r requirements.txt
 ```
 
