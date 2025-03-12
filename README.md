@@ -30,6 +30,14 @@ export GROQ_API_KEY=<API_TOKEN>
 export HF_API_KEY=<API_TOKEN>
 ```
 
+
+## Ollama Models
+If you wish to run the `localChatbot.py' ensure you have the associated model installed via ollama on your local device.
+
+```bash
+ollama pull deepseek-r1:1.5b
+```
+
 # ▶️ Run the App
 
 ```bash
