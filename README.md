@@ -1,6 +1,6 @@
 # 🖼️ AI Chatbot with Image Understanding  
 
-This project is a ChatGPT-style UI that processes both text and images using **LLaMA 3.2-90B Vision** via Fireworks AI.
+This project is a beginner implementation and introduction to using various API keys as well as Ollama models for creating your very own chatbot.
 
 ## 🚀 Features  
 - Text & Image inputs with AI responses  
