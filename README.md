@@ -7,12 +7,6 @@ This project is a beginner implementation and introduction to using various API 
 - Streamlit-based UI  
 - Powered by **Meta's LLaMA 3.2 Vision**  
 
-## 📦 Installation  
-
-```bash
-
-```
-
 ## 🔧 Dependencies
 
 Install manually if needed:
