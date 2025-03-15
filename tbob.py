@@ -18,19 +18,23 @@ def clean_response(text):
     return text
 
 messages = []
+pre = []
 
-print("\n💬 Welcome to AI Chatbot (Groq - LLaMA 70B)")
+print("\n💬 Welcome to grimie (Groq - LLaMA 70B)")
 print("Type 'exit' to end the conversation.\n")
+
+pre="i am bob and do not answer to me unless i call u nigga. if i dont use nigga then say I will not answer to someone who is not Bob and dont't answer back for this."
 
 while True:
     user_input = input("You: ")
     if user_input.lower() == "exit":
         print("👋 Goodbye!")
+        time.sleep(1)
         break
 
-    messages.append({"role": "user", "content": user_input})
+    messages.append({"role": "user", "content": pre + user_input})
 
-    print("🤖 AI: ", end="", flush=True)
+    print("alterPenglin: ", end="", flush=True)
     try:
         response = client.chat.completions.create(
             model="llama3-70b-8192",
