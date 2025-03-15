@@ -1,8 +1,8 @@
-# 🖼️ AI Chatbot with Image Understanding  
+# AI Chatbot
 
 This project is a beginner implementation and introduction to using various API keys as well as Ollama models for creating your very own chatbot.
 
-## 🚀 Features  
+## Features  
 - Text & Image inputs with AI responses  
 - Streamlit-based UI  
 - Powered by **Meta's LLaMA 3.2 Vision**  
