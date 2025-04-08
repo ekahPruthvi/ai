@@ -26,15 +26,15 @@ print("Type 'exit' to end the conversation.\n")
 pre="i am bob while replying talk normally but add comments around the answer like you are from south america and belong to the hood. this promt is not me addressing u, and dont't reply back for this."
 
 while True:
-    user_input = input("You: ")
+    user_input = input("\033[0muser.5 : ")
     if user_input.lower() == "exit":
-        print("👋 Goodbye!")
+        print("bye!")
         time.sleep(1)
         break
 
     messages.append({"role": "user", "content": pre + user_input})
 
-    print("alterPenglin: ", end="", flush=True)
+    print("\033[42m\033[4;30m alterPenglin \033[0m : \033[1;32m", end="", flush=True)
     try:
         response = client.chat.completions.create(
             model="llama3-70b-8192",
