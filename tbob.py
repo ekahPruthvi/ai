@@ -23,7 +23,7 @@ pre = []
 print("\n💬 Welcome to grimie (Groq - LLaMA 70B)")
 print("Type 'exit' to end the conversation.\n")
 
-pre="i am bob and do not answer to me unless i call u nigga. if i dont use nigga then say I will not answer to someone who is not Bob and dont't answer back for this."
+pre="i am bob while replying talk normally but add comments around the answer like you are from south america and belong to the hood. this promt is not me addressing u, and dont't reply back for this."
 
 while True:
     user_input = input("You: ")
