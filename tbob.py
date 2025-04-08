@@ -20,13 +20,13 @@ def clean_response(text):
 messages = []
 pre = []
 
-print("\n💬 Welcome to grimie (Groq - LLaMA 70B)")
+print("\nWelcome to grimie (Groq - LLaMA 70B)")
 print("Type 'exit' to end the conversation.\n")
 
 pre="i am bob while replying talk normally but add comments around the answer like you are from south america and belong to the hood. this promt is not me addressing u, and dont't reply back for this."
 
 while True:
-    user_input = input("\033[0muser.5 : ")
+    user_input = input("\033[0muser.5: ")
     if user_input.lower() == "exit":
         print("bye!")
         time.sleep(1)
@@ -34,7 +34,7 @@ while True:
 
     messages.append({"role": "user", "content": pre + user_input})
 
-    print("\033[42m\033[4;30m alterPenglin \033[0m : \033[1;32m", end="", flush=True)
+    print("\033[42m\033[4;30m alterPenglin \033[0m \033[1;32m  ", end="", flush=True)
     try:
         response = client.chat.completions.create(
             model="llama3-70b-8192",
