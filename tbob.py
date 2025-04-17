@@ -3,9 +3,11 @@ import time
 import re
 from groq import Groq
 from dotenv import load_dotenv
+import datetime
 
 load_dotenv()
 api_key=os.getenv("GROQ_API_KEY")
+
 
 if not api_key:
     print("no api key found")
@@ -27,10 +29,17 @@ pre="i am bob while replying talk normally but add comments around the answer li
 
 while True:
     user_input = input("\033[0muser.5: ")
-    if user_input.lower() == "exit":
+    if user_input.lower() == "exit" or user_input.lower() == "bye":
         print("bye!")
         time.sleep(1)
         break
+    elif user_input.lower() == "save":
+        out = open("reply_save.txt", "a")
+        out.write("\n\n" + str(datetime.datetime.now()) + "\n")
+        print("\n------------------Previous Reply saved------------------\n")
+        out.write(ai_reply)
+        out.close()
+        continue
 
     messages.append({"role": "user", "content": pre + user_input})
 
@@ -52,6 +61,6 @@ while True:
         full_response += char
         print(char, end="", flush=True)
         time.sleep(0.01)
-    print("\n")
+    print("\n---------------------------------------------------------------------\n")
 
     messages.append({"role": "assistant", "content": ai_reply})
