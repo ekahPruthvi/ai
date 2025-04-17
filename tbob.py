@@ -34,7 +34,7 @@ while True:
         time.sleep(1)
         break
     elif user_input.lower() == "save":
-        out = open("reply_save.txt", "a")
+        out = open("reply_save.md", "a")
         out.write("\n\n" + str(datetime.datetime.now()) + "\n")
         print("\n------------------Previous Reply saved------------------\n")
         out.write(ai_reply)
